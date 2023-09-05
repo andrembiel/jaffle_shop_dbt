@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: bigquery
+    database: myprojects-395815 
+    schema: dbt_andrebiel
+    tables:
+      -  name: jaffle_shop_customers_source
+         identifier: jaffle_shop_customers
+      - name: jaffle_shop_orders_source 
+        identifier:  jaffle_shop_orders 
+        

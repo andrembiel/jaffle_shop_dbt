@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: int_successeful_payments__grouped_by_order_id
+    description: This module sums all the non-failed payments and groups by order_id.
+    columns:
+      - name: order_id
+      - name: amount
+      - name: payment_finalised_at
+        

@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: stg_stripe_payments__payments
+    description:  This module renames columns and updates the data type for 'stg_stripe__payments' table. It also divides the amount by 100 to transform cents into pounds and updates the payment status column to a boolean type for successful payments.
+    columns:
+      - name: payment_id
+        tests:
+          - unique
+          - not_null
+      - name: order_id
+        tests:
+          - not_null
+      - name: is_payment_success
+        tests:
+          - not_null
+      - name: amount
+        tests:
+          - not_null
+      - name: payment_finalised_at
+        tests:
+          - not_null

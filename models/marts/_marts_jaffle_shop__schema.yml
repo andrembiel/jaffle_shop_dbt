@@ -1,0 +1,50 @@
+version: 2
+
+models:
+  - name: orders__payment_success
+    description: This module joins the views stg_jaffle_shop__customers , stg_jaffle_shop__orders and int_successeful_payments__grouped_by_order_id .
+    columns:
+    - name: order_id
+      tests:
+        - not_null
+        - unique
+    - name: customer_id
+      tests:
+        - not_null
+    - name: order_placed_at
+    - name: order_status
+    - name: total_amount
+      tests:
+          - not_null
+    - name: payment_finalised_at
+    - name: customer_first_name
+    - name: customer_last_name
+
+  - name: customers__first_order_date
+    description: This module calculates the first order date for each customer id
+    columns:
+      - name: customer_id
+      - name: first_order_date
+      
+  - name: orders__new_returning_customers
+    description: This module categorises the cotumers as new or retunrning.
+    columns:
+      - name: order_id
+        tests:
+          - unique
+      - name: customer_id
+      - name: order_placed_at
+      - name: order_status
+      - name: total_amount
+      - name: payment_finalised_at
+      - name: customer_first_name
+      - name: customer_last_name
+      - name: transaction_seq
+      - name: customer_sales_seq
+      - name: new_vs_return
+      - name: customer_lifetime_value
+      - name: first_order_date
+        tests:
+          - not_null
+
+          

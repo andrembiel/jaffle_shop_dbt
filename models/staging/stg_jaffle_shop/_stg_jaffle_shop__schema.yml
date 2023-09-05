@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: stg_jaffle_shop__customers
+    description: This module renames columns in the 'jaffle_shop_customers' table. Specifically, it changes 'ID' to 'customer_id , 'FIRST_NAME' to 'customer_first_name' and 'LAST_NAME' to 'customer_last_name'
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+      - name: customer_first_name
+        tests:
+          - not_null
+      - name: customer_last_name
+        tests:
+          - not_null
+  - name: stg_jaffle_shop__orders
+    description: This module renames columns in the 'jaffle_shop_order' table. it changes 'ID' to 'order_id', 'USER_ID' to 'customer_id' , 'STATUS' to 'order_status' and 'ORDER_DATE' to 'order_placed at'
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        tests:
+          - not_null
+      - name: order_status
+        tests:
+          - not_null
+      - name: order_placed_at
+        tests:
+          - not_null
+        

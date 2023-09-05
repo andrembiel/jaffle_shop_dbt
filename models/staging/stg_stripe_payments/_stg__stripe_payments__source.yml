@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: bigquery
+    database: myprojects-395815 
+    schema: dbt_andrebiel
+    tables:
+      -  name: stripe_payments_source
+         identifier: stripe_payments
