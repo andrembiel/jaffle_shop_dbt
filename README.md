@@ -97,13 +97,13 @@ my_new_project/
 ├── module/
 │   ├── staging/
 │   │   ├── stg_jaffle_shop
-│   │   |    ├──  _stg_jaffle_shop__models.yml
+│   │   |    ├──  _stg_jaffle_shop__schema.yml
 │   │   |    ├──  _stg_jaffle_shop__source.yml
 │   │   |    ├──  stg_jaffle_shop__customers.sql
 │   │   |    ├──  stg_jaffle_shop__orders.sql
 │   │   ├── stg_stripe_payments
 |   |   |    ├── _stg__stripe_payments__source.yml
-│   │   |    ├── _stg_stripe_payments__models.yml
+│   │   |    ├── _stg_stripe_payments__schema.yml
 │   │   |    ├── stg_stripe__payments.sql
 │   ├── intermediate/
 │   │   ├── int_jaffle_shop
@@ -111,7 +111,7 @@ my_new_project/
 │   │   |    ├── int_successeful_payments__grouped_by_order_id.sql
 │   ├── marts/
 │   |   ├──  marts_jaffle_shop
-│   │   |   ├──  _marts_jaffle_shop__models.yml
+│   │   |   ├──  _marts_jaffle_shop__schema.yml
 │   │   |   ├──  customers__first_order_date.sql
 │   │   |   ├──  orders__new_returning_customers.sql     
 │   │   |   ├──  orders__payment_sucess.sql
